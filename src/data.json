@@ -1,0 +1,218 @@
+[
+  {
+    "date": "2020-02-26",
+    "suspects": 1,
+    "confirmed": 0,
+    "deaths": 0,
+    "discarded": 0,
+    "link": "https://www.instagram.com/p/B9Htq8WHG27/"
+  },
+  {
+    "date": "2020-02-28",
+    "suspects": 0,
+    "confirmed": 0,
+    "deaths": 0,
+    "discarded": 1,
+    "link": "https://www.instagram.com/p/B9H1ktvH8i6/"
+  },
+  {
+    "date": "2020-03-09",
+    "suspects": 1,
+    "confirmed": 0,
+    "deaths": 0,
+    "discarded": 1,
+    "link": "https://www.instagram.com/p/B9meDqqnFXn/"
+  },
+  {
+    "date": "2020-03-14",
+    "suspects": 4,
+    "confirmed": 0,
+    "deaths": 0,
+    "discarded": 1,
+    "link": "https://www.instagram.com/p/B9z8q3IpTPE/"
+  },
+  {
+    "date": "2020-03-15",
+    "suspects": 5,
+    "confirmed": 0,
+    "deaths": 0,
+    "discarded": 1,
+    "link": "https://www.instagram.com/p/B9z8q3IpTPE/"
+  },
+  {
+    "date": "2020-03-16",
+    "suspects": 6,
+    "confirmed": 0,
+    "deaths": 0,
+    "discarded": 1,
+    "link": "https://www.instagram.com/p/B9z8q3IpTPE/"
+  },
+  {
+    "date": "2020-03-17",
+    "suspects": 16,
+    "confirmed": 0,
+    "deaths": 0,
+    "discarded": 2,
+    "link": "https://www.instagram.com/p/B9z8q3IpTPE/"
+  },
+  {
+    "date": "2020-03-23",
+    "suspects": 70,
+    "confirmed": 0,
+    "deaths": 0,
+    "discarded": 2,
+    "link": "https://www.instagram.com/p/B-FjAGPHXtz/"
+  },
+  {
+    "date": "2020-04-01",
+    "suspects": 113,
+    "confirmed": 1,
+    "deaths": 0,
+    "discarded": 25,
+    "link": "https://www.instagram.com/p/B-FjAGPHXtz/"
+  },
+  {
+    "date": "2020-04-02",
+    "suspects": 120,
+    "confirmed": 1,
+    "deaths": 0,
+    "discarded": 33,
+    "link": "https://www.instagram.com/p/B-f_XssH2BS/"
+  },
+  {
+    "date": "2020-04-03",
+    "suspects": 128,
+    "confirmed": 1,
+    "deaths": 0,
+    "discarded": 34,
+    "link": "https://www.instagram.com/p/B-iPXhvHBzP/"
+  },
+  {
+    "date": "2020-04-04",
+    "suspects": 136,
+    "confirmed": 1,
+    "deaths": 0,
+    "discarded": 34,
+    "link": "https://www.instagram.com/p/B-k1klXnV2z/"
+  },
+  {
+    "date": "2020-04-05",
+    "suspects": 146,
+    "confirmed": 1,
+    "deaths": 0,
+    "discarded": 37,
+    "link": "https://www.instagram.com/p/B-ncG5xntMP/"
+  },
+  {
+    "date": "2020-04-06",
+    "suspects": 166,
+    "confirmed": 1,
+    "deaths": 0,
+    "discarded": 43,
+    "link": "https://www.instagram.com/p/B-p9tPQnn9f/"
+  },
+  {
+    "date": "2020-04-07",
+    "suspects": 177,
+    "confirmed": 1,
+    "deaths": 0,
+    "discarded": 44,
+    "link": "https://www.instagram.com/p/B-sqU6qnjiy/"
+  },
+  {
+    "date": "2020-04-08",
+    "suspects": 197,
+    "confirmed": 1,
+    "deaths": 0,
+    "discarded": 45,
+    "link": "https://www.instagram.com/p/B-vC98cnudI/"
+  },
+  {
+    "date": "2020-04-09",
+    "suspects": 214,
+    "confirmed": 1,
+    "deaths": 0,
+    "discarded": 45,
+    "link": "https://www.instagram.com/p/B-yCZ5OHTXl/"
+  },
+  {
+    "date": "2020-04-10",
+    "suspects": 216,
+    "confirmed": 2,
+    "deaths": 0,
+    "discarded": 52,
+    "link": "https://www.instagram.com/p/B-0fOY8Hiyu/"
+  },
+  {
+    "date": "2020-04-11",
+    "suspects": 216,
+    "confirmed": 2,
+    "deaths": 0,
+    "discarded": 67,
+    "link": "https://www.instagram.com/p/B-22B6ZHiKV/"
+  },
+  {
+    "date": "2020-04-12",
+    "suspects": 211,
+    "confirmed": 2,
+    "deaths": 0,
+    "discarded": 79,
+    "link": "https://www.instagram.com/p/B-5cOpDn7Ji/"
+  },
+  {
+    "date": "2020-04-13",
+    "suspects": 219,
+    "confirmed": 2,
+    "deaths": 0,
+    "discarded": 81,
+    "link": "https://www.instagram.com/p/B-8F0rjnw2O/"
+  },
+  {
+    "date": "2020-04-14",
+    "suspects": 232,
+    "confirmed": 2,
+    "deaths": 0,
+    "discarded": 83,
+    "link": "https://www.instagram.com/p/B--jigmH20l/"
+  },
+  {
+    "date": "2020-04-15",
+    "suspects": 259,
+    "confirmed": 2,
+    "deaths": 0,
+    "discarded": 86,
+    "link": "https://www.instagram.com/p/B_BODovHkL7/"
+  },
+  {
+    "date": "2020-04-16",
+    "suspects": 272,
+    "confirmed": 3,
+    "deaths": 0,
+    "discarded": 88,
+    "link": "https://www.instagram.com/p/B_D0D-qBdD2/"
+  },
+  {
+    "date": "2020-04-17",
+    "suspects": 282,
+    "confirmed": 3,
+    "deaths": 0,
+    "discarded": 90,
+    "link": "https://www.instagram.com/p/B_GiV4BHemF/"
+  },
+  {
+    "date": "2020-04-19",
+    "suspects": 296,
+    "confirmed": 3,
+    "deaths": 0,
+    "discarded": 97,
+    "link": "https://www.instagram.com/p/B_LfVWbHR8O/"
+  },
+  {
+    "date": "2020-04-20",
+    "suspects": 312,
+    "confirmed": 4,
+    "deaths": 0,
+    "discarded": 97,
+    "link": "https://www.instagram.com/p/B_LfVWbHR8O/"
+  }
+]
