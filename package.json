@@ -1,0 +1,19 @@
+{
+  "name": "covid19-barbacena",
+  "version": "1.0.0",
+  "description": "Visualização do progresso do COVID-19 em Barbacena-MG",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddloschi/covid19-barbacena.git"
+  },
+  "author": "Maurício Batista <eddloschi@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/eddloschi/covid19-barbacena/issues"
+  },
+  "homepage": "https://github.com/eddloschi/covid19-barbacena#readme"
+}
