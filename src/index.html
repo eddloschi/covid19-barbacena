@@ -11,7 +11,9 @@
   <div class="header">
     <h1>COVID-19 em Barbacena-MG</h1>
   </div>
+
   <p class="updated-at">Última atualização: <%= updatedAt %></p>
+
   <div class="main">
     <div class="chart-container">
       <canvas id="cumulative"></canvas>
@@ -28,11 +30,19 @@
     <div class="chart-container">
       <canvas id="discarded-by-day"></canvas>
     </div>
+
+    <div class="disclaimer">
+      <p>Esta página não possui nenhum vínculo à prefeitura de Barbacena-MG ou aos seus canais oficiais de comunicação,
+        usando apenas os dados previamente tornados públicos através do instagram <a
+          href="https://www.instagram.com/prefeituradebarbacena">@prefeituradebarbacena</a></p>
+    </div>
+
     <div class="updates">
       <h2>Atualizações</h2>
       <ul id="updates-list"></ul>
     </div>
   </div>
+
   <div class="footer">
     <ul>
       <li><a href="https://github.com/eddloschi"><img src="github.svg" alt="Ícone do Github" height="24" width="24"></a>
