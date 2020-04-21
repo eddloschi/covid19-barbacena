@@ -20,6 +20,7 @@ h1 {
 .footer {
   background-color: #eceff1;
   color: #757575;
+  font-size: 0.75rem;
   position:absolute;
   text-align: center;
   width: 100%;
@@ -39,6 +40,9 @@ h1 {
   text-decoration: none;
 }
 
+.footer ul {
+  padding-left: 0;
+}
 
 .header {
   background-color: #0277bd;
