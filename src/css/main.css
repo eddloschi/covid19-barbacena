@@ -9,23 +9,23 @@ h1 {
   text-align: center;
 }
 
-.chart-container {
+.box {
   box-sizing: border-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  height: 96vmin;
-  margin-bottom: 30px;
-  position: relative;
+  margin:10px auto;
   width: 96vw;
+}
+
+.chart-container {
+  height: 96vmin;
+  position: relative;
 }
 
 .disclaimer {
   background-color: #ef5350;
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   color: #fff;
   font-size: 1.5rem;
   padding: 50px;
-  width: 96vw;
 }
 
 .disclaimer a {
@@ -73,6 +73,10 @@ h1 {
   color: #b0bec5;
   font-size: 0.9rem;
   text-align: center;
+}
+
+.updates {
+  padding: 10px 20px;
 }
 
 .updates li {
