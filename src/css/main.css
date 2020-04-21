@@ -9,10 +9,6 @@ h1 {
   text-align: center;
 }
 
-.charts {
-  margin: 10px;
-}
-
 .chart-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   height: 96vmin;
@@ -50,8 +46,18 @@ h1 {
   padding: 10px;
 }
 
+.main {
+  margin: 10px;
+}
+
 .updated-at {
   color: #b0bec5;
   font-size: 0.9rem;
   text-align: center;
+}
+
+.updates li {
+  font-size: 0.85rem;
+  font-weight: bold;
+  line-height: 2rem;
 }
