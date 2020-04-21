@@ -22,14 +22,16 @@ h1 {
 }
 
 .disclaimer {
-  background-color: #f44336;
+  background-color: #b71c1c;
   color: #fff;
   font-size: 1.5rem;
   padding: 50px;
 }
 
 .disclaimer a {
-  color: #fff;
+  color: #67daff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .footer {
