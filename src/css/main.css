@@ -38,6 +38,11 @@ h1 {
   margin-right: 10px;
 }
 
+.footer li a {
+  color: #000;
+  text-decoration: none;
+}
+
 
 .header {
   background-color: #0277bd;
