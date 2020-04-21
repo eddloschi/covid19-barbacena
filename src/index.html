@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID19 - Barbacena-MG</title>
+</head>
+
+<body>
+  <div class="header">
+    <h1>COVID-19 em Barbacena-MG</h1>
+  </div>
+  <p class="updated-at">Última atualização: <%= updatedAt %></p>
+  <div class="charts">
+    <div class="chart-container">
+      <canvas id="cumulative"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="confirmed-by-day"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="suspects-by-day"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="discarded-by-day"></canvas>
+    </div>
+  </div>
+  <div class="footer">
+    <ul>
+      <li><a href="https://github.com/eddloschi"><img src="github.svg" alt="Ícone do Github" height="24" width="24"></a>
+      </li>
+      <li><a href="https://www.instagram.com/eddloschi/"><img src="instagram.svg" alt="Ícone do Instagram" height="24"
+            width="24"></a></li>
+      <li><a href="https://twitter.com/eddloschi"><img src="twitter.svg" alt="Ícone do Twitter" height="24"
+            width="24"></a></li>
+    </ul>
+    <ul>
+      <li>Relatar um problema</li>
+    </ul>
+  </div>
+</body>
+
+</html>
