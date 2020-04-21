@@ -16,7 +16,7 @@ module.exports = mode => {
       new HtmlWebpackPlugin({
         template: "src/index.html",
         templateParameters: {
-          updatedAt: DateTime.local().setZone("America/Sao_Paulo").toLocaleString(DateTime.DATETIME_HUGE)
+          updatedAt: DateTime.local().setLocale('pt-BR').setZone("America/Sao_Paulo").toLocaleString(DateTime.DATETIME_HUGE)
         }
       }),
       new MiniCssExtractPlugin()
