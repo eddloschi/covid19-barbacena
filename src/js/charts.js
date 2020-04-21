@@ -82,25 +82,25 @@ const cumulativeChart = new Chart("cumulative", {
         label: "Confirmados",
         data: confirmed,
         backgroundColor: "rgba(239, 83, 80, 0.7)",
-        borderColor: "rgb(239, 83, 80)",
+        borderColor: "rgb(211, 47, 47)",
         borderWidth: 2,
-        pointBackgroundColor: "rgb(239, 83, 80)",
+        pointBackgroundColor: "rgb(211, 47, 47)",
       },
       {
         label: "Suspeitos",
         data: suspects,
         backgroundColor: "rgba(255, 238, 88, 0.3)",
-        borderColor: "rgb(255, 238, 88)",
+        borderColor: "rgb(251, 192, 45)",
         borderWidth: 2,
-        pointBackgroundColor: "rgb(255, 238, 88)",
+        pointBackgroundColor: "rgb(251, 192, 45)",
       },
       {
         label: "Descartados",
         data: discarded,
         backgroundColor: "rgba(102, 187, 10, 0.3)",
-        borderColor: "rgb(102, 187, 10)",
+        borderColor: "rgb(56, 142, 60)",
         borderWidth: 2,
-        pointBackgroundColor: "rgb(102, 187, 10)",
+        pointBackgroundColor: "rgb(56, 142, 60)",
       }
     ]
   },
@@ -138,7 +138,7 @@ const confirmedByDayChart = new Chart("confirmed-by-day", {
     datasets: [{
       label: "Confirmados por dia",
       data: confirmedByDayData,
-      backgroundColor: "rgb(239, 83, 80)"
+      backgroundColor: "rgb(211, 47, 47)"
     }]
   },
   options: confirmedByDayOptions()
@@ -151,7 +151,7 @@ const suspectsByDayChart = new Chart("suspects-by-day", {
     datasets: [{
       label: "Suspeitos por dia",
       data: suspectsByDayData,
-      backgroundColor: "rgb(255, 245, 157)"
+      backgroundColor: "rgb(251, 192, 45)"
     }]
   },
   options: byDayOptions()
@@ -164,7 +164,7 @@ const discardedByDayChart = new Chart("discarded-by-day", {
     datasets: [{
       label: "Descartados por dia",
       data: discardedByDayData,
-      backgroundColor: "rgb(165, 214, 167)"
+      backgroundColor: "rgb(56, 142, 60)"
     }]
   },
   options: byDayOptions()
