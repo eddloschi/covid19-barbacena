@@ -1,0 +1,10 @@
+language: node_js
+script:
+  - npm test
+  - npm build
+deploy:
+  edge: true # opt in to dpl v2
+  keep_history: false
+  local_dir: dist
+  provider: pages:git
+  token: $GITHUB_TOKEN
