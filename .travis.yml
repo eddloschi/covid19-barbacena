@@ -1,7 +1,7 @@
 language: node_js
 script:
   - npm test
-  - npm build
+  - npm run build
 deploy:
   edge: true # opt in to dpl v2
   keep_history: false
