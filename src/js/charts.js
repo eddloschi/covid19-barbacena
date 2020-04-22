@@ -67,6 +67,9 @@ const commonOptions = () => {
         type: "time",
         time: {
           unit: "day"
+        },
+        ticks: {
+          maxRotation: 180,
         }
       }]
     },
