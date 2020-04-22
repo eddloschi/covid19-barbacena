@@ -72,6 +72,11 @@ const commonOptions = () => {
   }
 }
 
+const cumulativeChartDatasetOptions = {
+  borderWidth: 1,
+  pointHitRadius: 2,
+  pointRadius: 2,
+}
 
 const cumulativeChart = new Chart("cumulative", {
   type: "line",
@@ -79,34 +84,28 @@ const cumulativeChart = new Chart("cumulative", {
     labels,
     datasets: [
       {
+        ...cumulativeChartDatasetOptions,
         backgroundColor: "rgba(239, 83, 80, 0.7)",
         borderColor: "rgb(211, 47, 47)",
-        borderWidth: 1,
         data: confirmed,
         label: "Confirmados",
         pointBackgroundColor: "rgb(211, 47, 47)",
-        pointHitRadius: 2,
-        pointRadius: 2,
       },
       {
+        ...cumulativeChartDatasetOptions,
         backgroundColor: "rgba(255, 238, 88, 0.3)",
         borderColor: "rgb(251, 192, 45)",
-        borderWidth: 1,
         data: suspects,
         label: "Suspeitos",
         pointBackgroundColor: "rgb(251, 192, 45)",
-        pointHitRadius: 2,
-        pointRadius: 2,
       },
       {
+        ...cumulativeChartDatasetOptions,
         backgroundColor: "rgba(102, 187, 10, 0.3)",
         borderColor: "rgb(56, 142, 60)",
-        borderWidth: 1,
         data: discarded,
         label: "Descartados",
         pointBackgroundColor: "rgb(56, 142, 60)",
-        pointHitRadius: 2,
-        pointRadius: 2,
       }
     ]
   },
