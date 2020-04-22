@@ -81,6 +81,10 @@ const commonOptions = () => {
       }]
     },
     tooltips: {
+      axis: "x",
+      intersect: false,
+      mode: "nearest",
+      position: "nearest",
       callbacks: {
         title: (tooltipItem) => {
           return DateTime.fromISO(tooltipItem[0].label).toLocaleString(DateTime.DATE_FULL)
