@@ -1,4 +1,5 @@
 import { Chart } from "chart.js"
+import { DateTime } from "luxon"
 import "chartjs-adapter-luxon"
 import data from "../data.json"
 
@@ -68,6 +69,13 @@ const commonOptions = () => {
           unit: "day"
         }
       }]
+    },
+    tooltips: {
+      callbacks: {
+        title: (tooltipItem) => {
+          return DateTime.fromISO(tooltipItem[0].label).toLocaleString(DateTime.DATE_FULL)
+        }
+      }
     }
   }
 }
