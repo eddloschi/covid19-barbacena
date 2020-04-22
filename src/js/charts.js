@@ -48,10 +48,10 @@ const commonOptions = () => {
   return {
     layout: {
       padding: {
-        left: 8,
-        right: 8,
         top: 0,
-        bottom: 8
+        right: 8,
+        left: 8,
+        bottom: 8,
       }
     },
     legend: {
@@ -85,26 +85,26 @@ const cumulativeChart = new Chart("cumulative", {
     datasets: [
       {
         ...cumulativeChartDatasetOptions,
-        backgroundColor: "rgba(239, 83, 80, 0.7)",
-        borderColor: "rgb(211, 47, 47)",
         data: confirmed,
         label: "Confirmados",
+        backgroundColor: "rgba(239, 83, 80, 0.7)",
+        borderColor: "rgb(211, 47, 47)",
         pointBackgroundColor: "rgb(211, 47, 47)",
       },
       {
         ...cumulativeChartDatasetOptions,
-        backgroundColor: "rgba(255, 238, 88, 0.3)",
-        borderColor: "rgb(251, 192, 45)",
         data: suspects,
         label: "Suspeitos",
+        backgroundColor: "rgba(255, 238, 88, 0.3)",
+        borderColor: "rgb(251, 192, 45)",
         pointBackgroundColor: "rgb(251, 192, 45)",
       },
       {
         ...cumulativeChartDatasetOptions,
-        backgroundColor: "rgba(102, 187, 10, 0.3)",
-        borderColor: "rgb(56, 142, 60)",
         data: discarded,
         label: "Descartados",
+        backgroundColor: "rgba(102, 187, 10, 0.3)",
+        borderColor: "rgb(56, 142, 60)",
         pointBackgroundColor: "rgb(56, 142, 60)",
       }
     ]
