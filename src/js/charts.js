@@ -3,10 +3,17 @@ import { DateTime } from "luxon"
 import "chartjs-adapter-luxon"
 import data from "../data.json"
 
+const mapData = (entryData) => {
+  if (entryData > 0) {
+    return entryData
+  }
+  return null
+}
+
 const labels = data.map(entry => { return entry.date })
-const confirmed = data.map(entry => { return entry.confirmed })
-const suspects = data.map(entry => { return entry.suspects })
-const discarded = data.map(entry => { return entry.discarded })
+const confirmed = data.map(entry => { return mapData(entry.confirmed) })
+const suspects = data.map(entry => { return mapData(entry.suspects) })
+const discarded = data.map(entry => { return mapData(entry.discarded) })
 
 const createByDayData = (section) => {
   let byDayData = []
@@ -83,9 +90,22 @@ const commonOptions = () => {
   }
 }
 
+const cumulativeChartOptions = () => {
+  let options = commonOptions()
+  options.scales.yAxes = [{
+    ticks: {
+      min: 1
+    }
+  }]
+  options.title = {
+    display: true,
+    text: "Evolução dos casos de COVID-19"
+  }
+  return options
+}
+
 const cumulativeChartDatasetOptions = {
   borderWidth: 1,
-  pointHitRadius: 2,
   pointRadius: 2,
 }
 
@@ -120,13 +140,7 @@ const cumulativeChart = new Chart("cumulative", {
       }
     ]
   },
-  options: {
-    ...commonOptions(),
-    title: {
-      display: true,
-      text: "Evolução dos casos de COVID-19"
-    }
-  }
+  options: cumulativeChartOptions()
 })
 
 const byDayOptions = () => {
