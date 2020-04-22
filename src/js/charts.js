@@ -57,7 +57,7 @@ const commonOptions = () => {
     layout: {
       padding: {
         top: 0,
-        right: 8,
+        right: 12,
         left: 8,
         bottom: 8,
       }
