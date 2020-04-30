@@ -158,6 +158,7 @@ const confirmedByDayOptions = () => {
   options.scales.yAxes = [
     {
       ticks: {
+        min: 0,
         stepSize: 1
       }
     }
