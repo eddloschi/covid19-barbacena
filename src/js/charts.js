@@ -25,44 +25,28 @@ const discarded = data.map((entry) => {
 
 const createByDayData = (section) => {
   const byDayData = []
-  const byDayLabels = []
   let prev = 0
 
   for (let index = 0; index < data.length; index++) {
     const value = data[index][section] - prev
 
-    if (value > 0) {
-      byDayData.push(value)
-      byDayLabels.push(data[index].date)
-    }
-
+    byDayData.push(value)
     prev = data[index][section]
   }
 
-  return { byDayData, byDayLabels }
+  return byDayData
 }
 
-const {
-  byDayData: confirmedByDayData,
-  byDayLabels: confirmedByDayLabels
-} = createByDayData('confirmed')
-const {
-  byDayData: discardedByDayData,
-  byDayLabels: discardedByDayLabels
-} = createByDayData('discarded')
-// const { byDayData: deathsByDayData, byDayLabels: deathsByDayLabels } = createByDayData("deaths")
+const confirmedByDayData = createByDayData('confirmed')
+const discardedByDayData = createByDayData('discarded')
+// const deathsByDayData = createByDayData("deaths")
 
 const suspectsByDayData = []
-const suspectsByDayLabels = []
 let prev = 0
 for (let index = 0; index < data.length; index++) {
   let value = data[index].suspects + data[index].discarded - prev
 
-  if (value > 0) {
-    suspectsByDayData.push(value)
-    suspectsByDayLabels.push(data[index].date)
-  }
-
+  suspectsByDayData.push(value)
   prev = data[index].suspects + data[index].discarded
 }
 
@@ -133,7 +117,7 @@ const cumulativeChartDatasetOptions = {
   pointRadius: 2
 }
 
-const cumulativeChart = new Chart('cumulative', {
+new Chart('cumulative', {
   type: 'line',
   data: {
     labels,
@@ -173,53 +157,21 @@ const byDayOptions = () => {
   return options
 }
 
-const confirmedByDayOptions = () => {
-  const options = byDayOptions()
-  options.scales.yAxes = [
-    {
-      ticks: {
-        stepSize: 1
-      }
-    }
-  ]
-  return options
-}
-
-const confirmedByDayChart = new Chart('confirmed-by-day', {
+new Chart('by-day', {
   type: 'bar',
   data: {
-    labels: confirmedByDayLabels,
+    labels: labels,
     datasets: [
       {
         label: 'Confirmados por dia',
         data: confirmedByDayData,
         backgroundColor: 'rgb(211, 47, 47)'
-      }
-    ]
-  },
-  options: confirmedByDayOptions()
-})
-
-const suspectsByDayChart = new Chart('suspects-by-day', {
-  type: 'bar',
-  data: {
-    labels: suspectsByDayLabels,
-    datasets: [
+      },
       {
         label: 'Suspeitos por dia',
         data: suspectsByDayData,
         backgroundColor: 'rgb(251, 192, 45)'
-      }
-    ]
-  },
-  options: byDayOptions()
-})
-
-const discardedByDayChart = new Chart('discarded-by-day', {
-  type: 'bar',
-  data: {
-    labels: discardedByDayLabels,
-    datasets: [
+      },
       {
         label: 'Descartados por dia',
         data: discardedByDayData,
