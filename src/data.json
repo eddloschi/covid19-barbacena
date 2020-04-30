@@ -270,5 +270,37 @@
     "deaths": 0,
     "discarded": 114,
     "link": "https://www.instagram.com/p/B_dfbKxHMOV/"
+  },
+  {
+    "date": "2020-04-27",
+    "suspects": 372,
+    "confirmed": 6,
+    "deaths": 0,
+    "discarded": 114,
+    "link": "https://www.instagram.com/p/B_gHg4tHv2M/"
+  },
+  {
+    "date": "2020-04-28",
+    "suspects": 378,
+    "confirmed": 7,
+    "deaths": 0,
+    "discarded": 118,
+    "link": "https://www.instagram.com/p/B_iymASHgs7/"
+  },
+  {
+    "date": "2020-04-29",
+    "suspects": 415,
+    "confirmed": 7,
+    "deaths": 0,
+    "discarded": 120,
+    "link": "https://www.instagram.com/p/B_lS_4YnQWD/"
+  },
+  {
+    "date": "2020-04-30",
+    "suspects": 426,
+    "confirmed": 9,
+    "deaths": 0,
+    "discarded": 126,
+    "link": "https://www.instagram.com/p/B_ny2fPn-XG/"
   }
 ]
