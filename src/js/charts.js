@@ -154,6 +154,10 @@ new Chart('cumulative', {
 const byDayOptions = () => {
   const options = commonOptions()
   options.scales.xAxes[0].offset = true
+  options.title = {
+    display: true,
+    text: 'Novas notificações diárias'
+  }
   return options
 }
 
@@ -163,17 +167,17 @@ new Chart('by-day', {
     labels: labels,
     datasets: [
       {
-        label: 'Confirmados por dia',
+        label: 'Novos casos confirmados',
         data: confirmedByDayData,
         backgroundColor: 'rgb(211, 47, 47)'
       },
       {
-        label: 'Suspeitos por dia',
+        label: 'Novos casos suspeitos',
         data: suspectsByDayData,
         backgroundColor: 'rgb(251, 192, 45)'
       },
       {
-        label: 'Descartados por dia',
+        label: 'Novos casos descartados',
         data: discardedByDayData,
         backgroundColor: 'rgb(56, 142, 60)'
       }
