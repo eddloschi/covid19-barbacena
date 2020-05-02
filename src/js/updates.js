@@ -10,7 +10,7 @@ data.forEach((entry) => {
     `${DateTime.fromISO(entry.date).toLocaleString(DateTime.DATE_SHORT)}:`
   )
   const stats = document.createTextNode(
-    `Confirmados:\xa0${entry.confirmed} - Suspeitos:\xa0${entry.suspects} - Descartados:\xa0${entry.discarded}`
+    `Mortes:\xa0${entry.deaths} - Confirmados:\xa0${entry.confirmed} - Suspeitos:\xa0${entry.suspects} - Descartados:\xa0${entry.discarded}`
   )
   anchor.href = entry.link
   anchor.appendChild(date)
