@@ -302,5 +302,13 @@
     "deaths": 0,
     "discarded": 126,
     "link": "https://www.instagram.com/p/B_ny2fPn-XG/"
+  },
+  {
+    "date": "2020-05-01",
+    "suspects": 436,
+    "confirmed": 10,
+    "deaths": 0,
+    "discarded": 129,
+    "link": "http://barbacena.mg.gov.br/covid19/"
   }
 ]
