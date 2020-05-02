@@ -310,5 +310,13 @@
     "deaths": 0,
     "discarded": 129,
     "link": "https://www.instagram.com/p/B_qlbQpHWMU/"
+  },
+  {
+    "date": "2020-05-02",
+    "suspects": 444,
+    "confirmed": 11,
+    "deaths": 1,
+    "discarded": 130,
+    "link": "https://www.instagram.com/p/B_s1WV7nnkA/"
   }
 ]
