@@ -13,6 +13,9 @@ const mapData = (entryData) => {
 const labels = data.map((entry) => {
   return entry.date
 })
+const deaths = data.map((entry) => {
+  return mapData(entry.deaths)
+})
 const confirmed = data.map((entry) => {
   return mapData(entry.confirmed)
 })
@@ -39,7 +42,7 @@ const createByDayData = (section) => {
 
 const confirmedByDayData = createByDayData('confirmed')
 const discardedByDayData = createByDayData('discarded')
-// const deathsByDayData = createByDayData("deaths")
+const deathsByDayData = createByDayData("deaths")
 
 const suspectsByDayData = []
 let prev = 0
@@ -124,6 +127,14 @@ new Chart('cumulative', {
     datasets: [
       {
         ...cumulativeChartDatasetOptions,
+        data: deaths,
+        label: 'Mortes',
+        backgroundColor: 'rgba(33, 33, 33, 0.7)',
+        borderColor: 'rgb(33, 33, 33)',
+        pointBackgroundColor: 'rgb(33, 33, 33)'
+      },
+      {
+        ...cumulativeChartDatasetOptions,
         data: confirmed,
         label: 'Confirmados',
         backgroundColor: 'rgba(239, 83, 80, 0.7)',
@@ -166,6 +177,11 @@ new Chart('by-day', {
   data: {
     labels: labels,
     datasets: [
+      {
+        label: 'Novas mortes',
+        data: deathsByDayData,
+        backgroundColor: 'rgb(33, 33, 33)'
+      },
       {
         label: 'Novos casos confirmados',
         data: confirmedByDayData,
