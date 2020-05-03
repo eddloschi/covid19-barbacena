@@ -42,7 +42,7 @@ const createByDayData = (section) => {
 
 const confirmedByDayData = createByDayData('confirmed')
 const discardedByDayData = createByDayData('discarded')
-const deathsByDayData = createByDayData("deaths")
+const deathsByDayData = createByDayData('deaths')
 
 const suspectsByDayData = []
 let prev = 0
@@ -101,13 +101,6 @@ const commonOptions = () => {
 
 const cumulativeChartOptions = () => {
   const options = commonOptions()
-  options.scales.yAxes = [
-    {
-      ticks: {
-        min: 1
-      }
-    }
-  ]
   options.title = {
     display: true,
     text: 'Evolução dos casos de COVID-19'
