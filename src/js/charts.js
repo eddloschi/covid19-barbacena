@@ -8,18 +8,21 @@ const cumulativeData = {
   deaths: [],
   confirmed: [],
   suspects: [],
-  discarded: []
+  discarded: [],
+  recovered: []
 }
 const byDayData = {
   confirmed: [],
   discarded: [],
-  deaths: []
+  deaths: [],
+  recovered: []
 }
 const prev = {
   confirmed: 0,
   discarded: 0,
   deaths: 0,
-  suspects: 0
+  suspects: 0,
+  recovered: 0
 }
 const suspectsByDayData = []
 
@@ -124,6 +127,14 @@ new Chart('cumulative', {
       },
       {
         ...cumulativeChartDatasetOptions,
+        data: cumulativeData.recovered,
+        label: 'Recuperados',
+        backgroundColor: 'rgba(3, 169, 244, 0.5)',
+        borderColor: 'rgb(3, 169, 244)',
+        pointBackgroundColor: 'rgb(3, 169, 244)'
+      },
+      {
+        ...cumulativeChartDatasetOptions,
         data: cumulativeData.confirmed,
         label: 'Confirmados',
         backgroundColor: 'rgba(239, 83, 80, 0.7)',
@@ -132,19 +143,19 @@ new Chart('cumulative', {
       },
       {
         ...cumulativeChartDatasetOptions,
-        data: cumulativeData.suspects,
-        label: 'Suspeitos',
-        backgroundColor: 'rgba(255, 238, 88, 0.3)',
-        borderColor: 'rgb(251, 192, 45)',
-        pointBackgroundColor: 'rgb(251, 192, 45)'
-      },
-      {
-        ...cumulativeChartDatasetOptions,
         data: cumulativeData.discarded,
         label: 'Descartados',
         backgroundColor: 'rgba(102, 187, 10, 0.3)',
         borderColor: 'rgb(56, 142, 60)',
         pointBackgroundColor: 'rgb(56, 142, 60)'
+      },
+      {
+        ...cumulativeChartDatasetOptions,
+        data: cumulativeData.suspects,
+        label: 'Suspeitos',
+        backgroundColor: 'rgba(255, 238, 88, 0.3)',
+        borderColor: 'rgb(251, 192, 45)',
+        pointBackgroundColor: 'rgb(251, 192, 45)'
       }
     ]
   },
@@ -172,19 +183,24 @@ new Chart('by-day', {
         backgroundColor: 'rgb(33, 33, 33)'
       },
       {
+        label: 'Novos recuperados',
+        data: byDayData.recovered,
+        backgroundColor: 'rgb(3, 169, 244)'
+      },
+      {
         label: 'Novos casos confirmados',
         data: byDayData.confirmed,
         backgroundColor: 'rgb(211, 47, 47)'
       },
       {
-        label: 'Novos casos suspeitos',
-        data: byDayData.suspects,
-        backgroundColor: 'rgb(251, 192, 45)'
-      },
-      {
         label: 'Novos casos descartados',
         data: byDayData.discarded,
         backgroundColor: 'rgb(56, 142, 60)'
+      },
+      {
+        label: 'Novos casos suspeitos',
+        data: byDayData.suspects,
+        backgroundColor: 'rgb(251, 192, 45)'
       }
     ]
   },

@@ -5,7 +5,8 @@
     "confirmed": 0,
     "deaths": 0,
     "discarded": 0,
-    "link": "https://www.instagram.com/p/B9Htq8WHG27/"
+    "link": "https://www.instagram.com/p/B9Htq8WHG27/",
+    "recovered": 0
   },
   {
     "date": "2020-02-28",
@@ -13,7 +14,8 @@
     "confirmed": 0,
     "deaths": 0,
     "discarded": 1,
-    "link": "https://www.instagram.com/p/B9H1ktvH8i6/"
+    "link": "https://www.instagram.com/p/B9H1ktvH8i6/",
+    "recovered": 0
   },
   {
     "date": "2020-03-09",
@@ -21,7 +23,8 @@
     "confirmed": 0,
     "deaths": 0,
     "discarded": 1,
-    "link": "https://www.instagram.com/p/B9meDqqnFXn/"
+    "link": "https://www.instagram.com/p/B9meDqqnFXn/",
+    "recovered": 0
   },
   {
     "date": "2020-03-14",
@@ -29,7 +32,8 @@
     "confirmed": 0,
     "deaths": 0,
     "discarded": 1,
-    "link": "https://www.instagram.com/p/B9z8q3IpTPE/"
+    "link": "https://www.instagram.com/p/B9z8q3IpTPE/",
+    "recovered": 0
   },
   {
     "date": "2020-03-15",
@@ -37,7 +41,8 @@
     "confirmed": 0,
     "deaths": 0,
     "discarded": 1,
-    "link": "https://www.instagram.com/p/B9z8q3IpTPE/"
+    "link": "https://www.instagram.com/p/B9z8q3IpTPE/",
+    "recovered": 0
   },
   {
     "date": "2020-03-16",
@@ -45,7 +50,8 @@
     "confirmed": 0,
     "deaths": 0,
     "discarded": 1,
-    "link": "https://www.instagram.com/p/B9z8q3IpTPE/"
+    "link": "https://www.instagram.com/p/B9z8q3IpTPE/",
+    "recovered": 0
   },
   {
     "date": "2020-03-17",
@@ -53,7 +59,8 @@
     "confirmed": 0,
     "deaths": 0,
     "discarded": 2,
-    "link": "https://www.instagram.com/p/B911c79HS6o/"
+    "link": "https://www.instagram.com/p/B911c79HS6o/",
+    "recovered": 0
   },
   {
     "date": "2020-03-23",
@@ -61,7 +68,8 @@
     "confirmed": 0,
     "deaths": 0,
     "discarded": 2,
-    "link": "https://www.instagram.com/p/B-FjAGPHXtz/"
+    "link": "https://www.instagram.com/p/B-FjAGPHXtz/",
+    "recovered": 0
   },
   {
     "date": "2020-04-01",
@@ -69,7 +77,8 @@
     "confirmed": 1,
     "deaths": 0,
     "discarded": 25,
-    "link": "https://www.instagram.com/p/B-cj6zlBQeN/"
+    "link": "https://www.instagram.com/p/B-cj6zlBQeN/",
+    "recovered": 0
   },
   {
     "date": "2020-04-02",
@@ -77,7 +86,8 @@
     "confirmed": 1,
     "deaths": 0,
     "discarded": 33,
-    "link": "https://www.instagram.com/p/B-f_XssH2BS/"
+    "link": "https://www.instagram.com/p/B-f_XssH2BS/",
+    "recovered": 0
   },
   {
     "date": "2020-04-03",
@@ -85,7 +95,8 @@
     "confirmed": 1,
     "deaths": 0,
     "discarded": 34,
-    "link": "https://www.instagram.com/p/B-iPXhvHBzP/"
+    "link": "https://www.instagram.com/p/B-iPXhvHBzP/",
+    "recovered": 0
   },
   {
     "date": "2020-04-04",
@@ -93,7 +104,8 @@
     "confirmed": 1,
     "deaths": 0,
     "discarded": 34,
-    "link": "https://www.instagram.com/p/B-k1klXnV2z/"
+    "link": "https://www.instagram.com/p/B-k1klXnV2z/",
+    "recovered": 0
   },
   {
     "date": "2020-04-05",
@@ -101,7 +113,8 @@
     "confirmed": 1,
     "deaths": 0,
     "discarded": 37,
-    "link": "https://www.instagram.com/p/B-ncG5xntMP/"
+    "link": "https://www.instagram.com/p/B-ncG5xntMP/",
+    "recovered": 0
   },
   {
     "date": "2020-04-06",
@@ -109,7 +122,8 @@
     "confirmed": 1,
     "deaths": 0,
     "discarded": 43,
-    "link": "https://www.instagram.com/p/B-p9tPQnn9f/"
+    "link": "https://www.instagram.com/p/B-p9tPQnn9f/",
+    "recovered": 0
   },
   {
     "date": "2020-04-07",
@@ -117,7 +131,8 @@
     "confirmed": 1,
     "deaths": 0,
     "discarded": 44,
-    "link": "https://www.instagram.com/p/B-sqU6qnjiy/"
+    "link": "https://www.instagram.com/p/B-sqU6qnjiy/",
+    "recovered": 0
   },
   {
     "date": "2020-04-08",
@@ -125,7 +140,8 @@
     "confirmed": 1,
     "deaths": 0,
     "discarded": 45,
-    "link": "https://www.instagram.com/p/B-vC98cnudI/"
+    "link": "https://www.instagram.com/p/B-vC98cnudI/",
+    "recovered": 0
   },
   {
     "date": "2020-04-09",
@@ -133,7 +149,8 @@
     "confirmed": 1,
     "deaths": 0,
     "discarded": 45,
-    "link": "https://www.instagram.com/p/B-yCZ5OHTXl/"
+    "link": "https://www.instagram.com/p/B-yCZ5OHTXl/",
+    "recovered": 0
   },
   {
     "date": "2020-04-10",
@@ -141,7 +158,8 @@
     "confirmed": 2,
     "deaths": 0,
     "discarded": 52,
-    "link": "https://www.instagram.com/p/B-0fOY8Hiyu/"
+    "link": "https://www.instagram.com/p/B-0fOY8Hiyu/",
+    "recovered": 0
   },
   {
     "date": "2020-04-11",
@@ -149,7 +167,8 @@
     "confirmed": 2,
     "deaths": 0,
     "discarded": 67,
-    "link": "https://www.instagram.com/p/B-22B6ZHiKV/"
+    "link": "https://www.instagram.com/p/B-22B6ZHiKV/",
+    "recovered": 0
   },
   {
     "date": "2020-04-12",
@@ -157,7 +176,8 @@
     "confirmed": 2,
     "deaths": 0,
     "discarded": 79,
-    "link": "https://www.instagram.com/p/B-5cOpDn7Ji/"
+    "link": "https://www.instagram.com/p/B-5cOpDn7Ji/",
+    "recovered": 0
   },
   {
     "date": "2020-04-13",
@@ -165,7 +185,8 @@
     "confirmed": 2,
     "deaths": 0,
     "discarded": 81,
-    "link": "https://www.instagram.com/p/B-8F0rjnw2O/"
+    "link": "https://www.instagram.com/p/B-8F0rjnw2O/",
+    "recovered": 0
   },
   {
     "date": "2020-04-14",
@@ -173,7 +194,8 @@
     "confirmed": 2,
     "deaths": 0,
     "discarded": 83,
-    "link": "https://www.instagram.com/p/B--jigmH20l/"
+    "link": "https://www.instagram.com/p/B--jigmH20l/",
+    "recovered": 0
   },
   {
     "date": "2020-04-15",
@@ -181,7 +203,8 @@
     "confirmed": 2,
     "deaths": 0,
     "discarded": 86,
-    "link": "https://www.instagram.com/p/B_BODovHkL7/"
+    "link": "https://www.instagram.com/p/B_BODovHkL7/",
+    "recovered": 0
   },
   {
     "date": "2020-04-16",
@@ -189,7 +212,8 @@
     "confirmed": 3,
     "deaths": 0,
     "discarded": 88,
-    "link": "https://www.instagram.com/p/B_D0D-qBdD2/"
+    "link": "https://www.instagram.com/p/B_D0D-qBdD2/",
+    "recovered": 0
   },
   {
     "date": "2020-04-17",
@@ -197,7 +221,8 @@
     "confirmed": 3,
     "deaths": 0,
     "discarded": 90,
-    "link": "https://www.instagram.com/p/B_GiV4BHemF/"
+    "link": "https://www.instagram.com/p/B_GiV4BHemF/",
+    "recovered": 0
   },
   {
     "date": "2020-04-18",
@@ -205,7 +230,8 @@
     "confirmed": 3,
     "deaths": 0,
     "discarded": 92,
-    "link": "https://www.instagram.com/p/B_I_4BinpuZ/"
+    "link": "https://www.instagram.com/p/B_I_4BinpuZ/",
+    "recovered": 0
   },
   {
     "date": "2020-04-19",
@@ -213,7 +239,8 @@
     "confirmed": 3,
     "deaths": 0,
     "discarded": 97,
-    "link": "https://www.instagram.com/p/B_LfVWbHR8O/"
+    "link": "https://www.instagram.com/p/B_LfVWbHR8O/",
+    "recovered": 0
   },
   {
     "date": "2020-04-20",
@@ -221,7 +248,8 @@
     "confirmed": 4,
     "deaths": 0,
     "discarded": 97,
-    "link": "https://www.instagram.com/p/B_OCgIBnB6w/"
+    "link": "https://www.instagram.com/p/B_OCgIBnB6w/",
+    "recovered": 0
   },
   {
     "date": "2020-04-21",
@@ -229,7 +257,8 @@
     "confirmed": 4,
     "deaths": 0,
     "discarded": 102,
-    "link": "https://www.instagram.com/p/B_QmZm9H8Yo/"
+    "link": "https://www.instagram.com/p/B_QmZm9H8Yo/",
+    "recovered": 0
   },
   {
     "date": "2020-04-22",
@@ -237,7 +266,8 @@
     "confirmed": 4,
     "deaths": 0,
     "discarded": 105,
-    "link": "https://www.instagram.com/p/B_TLb4wnHgX/"
+    "link": "https://www.instagram.com/p/B_TLb4wnHgX/",
+    "recovered": 0
   },
   {
     "date": "2020-04-23",
@@ -245,7 +275,8 @@
     "confirmed": 5,
     "deaths": 0,
     "discarded": 106,
-    "link": "https://www.instagram.com/p/B_V64RVnHrz/"
+    "link": "https://www.instagram.com/p/B_V64RVnHrz/",
+    "recovered": 0
   },
   {
     "date": "2020-04-24",
@@ -253,7 +284,8 @@
     "confirmed": 5,
     "deaths": 0,
     "discarded": 112,
-    "link": "https://www.instagram.com/p/B_YTnGkHxzi/"
+    "link": "https://www.instagram.com/p/B_YTnGkHxzi/",
+    "recovered": 0
   },
   {
     "date": "2020-04-25",
@@ -261,7 +293,8 @@
     "confirmed": 5,
     "deaths": 0,
     "discarded": 113,
-    "link": "https://www.instagram.com/p/B_a-aKcHyv7/"
+    "link": "https://www.instagram.com/p/B_a-aKcHyv7/",
+    "recovered": 0
   },
   {
     "date": "2020-04-26",
@@ -269,7 +302,8 @@
     "confirmed": 5,
     "deaths": 0,
     "discarded": 114,
-    "link": "https://www.instagram.com/p/B_dfbKxHMOV/"
+    "link": "https://www.instagram.com/p/B_dfbKxHMOV/",
+    "recovered": 0
   },
   {
     "date": "2020-04-27",
@@ -277,7 +311,8 @@
     "confirmed": 6,
     "deaths": 0,
     "discarded": 114,
-    "link": "https://www.instagram.com/p/B_gHg4tHv2M/"
+    "link": "https://www.instagram.com/p/B_gHg4tHv2M/",
+    "recovered": 0
   },
   {
     "date": "2020-04-28",
@@ -285,7 +320,8 @@
     "confirmed": 7,
     "deaths": 0,
     "discarded": 118,
-    "link": "https://www.instagram.com/p/B_iymASHgs7/"
+    "link": "https://www.instagram.com/p/B_iymASHgs7/",
+    "recovered": 0
   },
   {
     "date": "2020-04-29",
@@ -293,7 +329,8 @@
     "confirmed": 7,
     "deaths": 0,
     "discarded": 120,
-    "link": "https://www.instagram.com/p/B_lS_4YnQWD/"
+    "link": "https://www.instagram.com/p/B_lS_4YnQWD/",
+    "recovered": 0
   },
   {
     "date": "2020-04-30",
@@ -301,7 +338,8 @@
     "confirmed": 9,
     "deaths": 0,
     "discarded": 126,
-    "link": "https://www.instagram.com/p/B_ny2fPn-XG/"
+    "link": "https://www.instagram.com/p/B_ny2fPn-XG/",
+    "recovered": 0
   },
   {
     "date": "2020-05-01",
@@ -309,7 +347,8 @@
     "confirmed": 10,
     "deaths": 0,
     "discarded": 129,
-    "link": "https://www.instagram.com/p/B_qlbQpHWMU/"
+    "link": "https://www.instagram.com/p/B_qlbQpHWMU/",
+    "recovered": 4
   },
   {
     "date": "2020-05-02",
@@ -317,7 +356,8 @@
     "confirmed": 11,
     "deaths": 1,
     "discarded": 130,
-    "link": "https://www.instagram.com/p/B_s1WV7nnkA/"
+    "link": "https://www.instagram.com/p/B_s1WV7nnkA/",
+    "recovered": 5
   },
   {
     "date": "2020-05-03",
@@ -325,6 +365,7 @@
     "confirmed": 11,
     "deaths": 1,
     "discarded": 132,
-    "link": "https://www.instagram.com/p/B_vmSxCHsSY/"
+    "link": "https://www.instagram.com/p/B_vmSxCHsSY/",
+    "recovered": 5
   }
 ]

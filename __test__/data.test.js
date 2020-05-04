@@ -16,6 +16,7 @@ test('data types', () => {
     expect(Number.isInteger(entry.deaths)).toBeTruthy()
     expect(Number.isInteger(entry.discarded)).toBeTruthy()
     expect(entry.link).toMatch(/^https?:\/\//)
+    expect(Number.isInteger(entry.recovered)).toBeTruthy()
   })
 })
 
