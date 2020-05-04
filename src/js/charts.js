@@ -76,7 +76,8 @@ const commonOptions = () => {
             maxRotation: 180
           }
         }
-      ]
+      ],
+      yAxes: [{ ticks: { min: 0 } }]
     },
     tooltips: {
       axis: 'x',
