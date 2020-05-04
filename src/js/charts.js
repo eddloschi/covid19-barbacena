@@ -3,55 +3,50 @@ import { DateTime } from 'luxon'
 import 'chartjs-adapter-luxon'
 import data from '../data.json'
 
+const labels = []
+const cumulativeData = {
+  deaths: [],
+  confirmed: [],
+  suspects: [],
+  discarded: []
+}
+const byDayData = {
+  confirmed: [],
+  discarded: [],
+  deaths: []
+}
+const prev = {
+  confirmed: 0,
+  discarded: 0,
+  deaths: 0,
+  suspects: 0
+}
+const suspectsByDayData = []
+
 const mapData = (entryData) => {
-  if (entryData > 0) {
+  if (entryData == undefined || entryData > 0) {
     return entryData
   }
   return null
 }
 
-const labels = data.map((entry) => {
-  return entry.date
-})
-const deaths = data.map((entry) => {
-  return mapData(entry.deaths)
-})
-const confirmed = data.map((entry) => {
-  return mapData(entry.confirmed)
-})
-const suspects = data.map((entry) => {
-  return mapData(entry.suspects)
-})
-const discarded = data.map((entry) => {
-  return mapData(entry.discarded)
-})
+data.forEach((entry) => {
+  labels.push(entry.date)
 
-const createByDayData = (section) => {
-  const byDayData = []
-  let prev = 0
-
-  for (let index = 0; index < data.length; index++) {
-    const value = data[index][section] - prev
-
-    byDayData.push(value)
-    prev = data[index][section]
+  for (let section in cumulativeData) {
+    cumulativeData[section].push(mapData(entry[section]))
   }
 
-  return byDayData
-}
+  for (let section in byDayData) {
+    byDayData[section].push(entry[section] - prev[section])
+    prev[section] = entry[section]
+  }
 
-const confirmedByDayData = createByDayData('confirmed')
-const discardedByDayData = createByDayData('discarded')
-const deathsByDayData = createByDayData('deaths')
+  suspectsByDayData.push(entry.suspects + entry.discarded - prev.suspects)
+  prev.suspects = entry.suspects + entry.discarded
+})
 
-const suspectsByDayData = []
-let prev = 0
-for (let index = 0; index < data.length; index++) {
-  let value = data[index].suspects + data[index].discarded - prev
-
-  suspectsByDayData.push(value)
-  prev = data[index].suspects + data[index].discarded
-}
+byDayData.suspects = suspectsByDayData
 
 const commonOptions = () => {
   return {
@@ -120,7 +115,7 @@ new Chart('cumulative', {
     datasets: [
       {
         ...cumulativeChartDatasetOptions,
-        data: deaths,
+        data: cumulativeData.deaths,
         label: 'Mortes',
         backgroundColor: 'rgba(33, 33, 33, 0.7)',
         borderColor: 'rgb(33, 33, 33)',
@@ -128,7 +123,7 @@ new Chart('cumulative', {
       },
       {
         ...cumulativeChartDatasetOptions,
-        data: confirmed,
+        data: cumulativeData.confirmed,
         label: 'Confirmados',
         backgroundColor: 'rgba(239, 83, 80, 0.7)',
         borderColor: 'rgb(211, 47, 47)',
@@ -136,7 +131,7 @@ new Chart('cumulative', {
       },
       {
         ...cumulativeChartDatasetOptions,
-        data: suspects,
+        data: cumulativeData.suspects,
         label: 'Suspeitos',
         backgroundColor: 'rgba(255, 238, 88, 0.3)',
         borderColor: 'rgb(251, 192, 45)',
@@ -144,7 +139,7 @@ new Chart('cumulative', {
       },
       {
         ...cumulativeChartDatasetOptions,
-        data: discarded,
+        data: cumulativeData.discarded,
         label: 'Descartados',
         backgroundColor: 'rgba(102, 187, 10, 0.3)',
         borderColor: 'rgb(56, 142, 60)',
@@ -172,22 +167,22 @@ new Chart('by-day', {
     datasets: [
       {
         label: 'Novas mortes',
-        data: deathsByDayData,
+        data: byDayData.deaths,
         backgroundColor: 'rgb(33, 33, 33)'
       },
       {
         label: 'Novos casos confirmados',
-        data: confirmedByDayData,
+        data: byDayData.confirmed,
         backgroundColor: 'rgb(211, 47, 47)'
       },
       {
         label: 'Novos casos suspeitos',
-        data: suspectsByDayData,
+        data: byDayData.suspects,
         backgroundColor: 'rgb(251, 192, 45)'
       },
       {
         label: 'Novos casos descartados',
-        data: discardedByDayData,
+        data: byDayData.discarded,
         backgroundColor: 'rgb(56, 142, 60)'
       }
     ]
