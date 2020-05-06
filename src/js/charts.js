@@ -15,6 +15,7 @@ const byDayData = {
   confirmed: [],
   discarded: [],
   deaths: [],
+  suspects: [],
   recovered: []
 }
 const prev = {
@@ -24,7 +25,7 @@ const prev = {
   suspects: 0,
   recovered: 0
 }
-const suspectsByDayData = []
+// const suspectsByDayData = []
 
 const mapData = (entryData) => {
   if (entryData == undefined || entryData > 0) {
@@ -45,11 +46,11 @@ data.forEach((entry) => {
     prev[section] = entry[section]
   }
 
-  suspectsByDayData.push(entry.suspects + entry.discarded - prev.suspects)
-  prev.suspects = entry.suspects + entry.discarded
+  // suspectsByDayData.push(entry.suspects + entry.discarded - prev.suspects)
+  // prev.suspects = entry.suspects + entry.discarded
 })
 
-byDayData.suspects = suspectsByDayData
+// byDayData.suspects = suspectsByDayData
 
 const commonOptions = () => {
   return {
