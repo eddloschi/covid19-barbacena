@@ -12,12 +12,16 @@ h1 {
 .box {
   box-sizing: border-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin:10px auto;
+  margin: 10px auto;
   width: 94vw;
 }
 
 .chart-container {
   height: 96vmin;
+  position: relative;
+}
+
+.vertical-chart {
   position: relative;
 }
 
@@ -38,7 +42,7 @@ h1 {
   background-color: #eceff1;
   color: #757575;
   font-size: 0.75rem;
-  position:absolute;
+  position: absolute;
   text-align: center;
   width: 100%;
 }

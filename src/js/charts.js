@@ -26,19 +26,21 @@ const prev = {
 }
 const activeCases = []
 
-const mapData = ({ entryData, date }) => {
+const mapData = ({ entryData, date, axis }) => {
   if (!entryData) {
     return null
   }
-  return {
-    x: date,
-    y: entryData
+
+  const point = {
+    t: date
   }
+  point[axis] = entryData
+  return point
 }
 
 data.forEach((entry) => {
   for (let section in cumulativeData) {
-    const point = mapData({ entryData: entry[section], date: entry.date })
+    const point = mapData({ entryData: entry[section], date: entry.date, axis: 'y' })
     if (point != null) {
       cumulativeData[section].push(point)
     }
@@ -47,7 +49,8 @@ data.forEach((entry) => {
   for (let section in byDayData) {
     const point = mapData({
       entryData: entry[section] - prev[section],
-      date: entry.date
+      date: entry.date,
+      axis: 'x'
     })
     if (point != null) {
       byDayData[section].push(point)
@@ -57,11 +60,18 @@ data.forEach((entry) => {
 
   const point = mapData({
     entryData: entry.confirmed - entry.deaths - entry.recovered,
-    date: entry.date
+    date: entry.date,
+    axis: 'y'
   })
   if (point != null) {
     activeCases.push(point)
   }
+})
+
+const BY_DAY_ENTRY_HEIGHT = 50
+const byDayChartHeight = data.length * BY_DAY_ENTRY_HEIGHT
+document.querySelectorAll('.vertical-chart').forEach((node) => {
+  node.style.height = `${byDayChartHeight}px`
 })
 
 const commonOptions = () => {
@@ -176,7 +186,12 @@ new Chart('cumulative', {
 
 const byDayOptions = () => {
   const options = commonOptions()
-  options.scales.xAxes[0].offset = true
+  const xAxes = options.scales.xAxes
+  options.scales.xAxes = options.scales.yAxes
+  options.scales.yAxes = xAxes
+  options.scales.yAxes[0].offset = true
+  options.scales.yAxes[0].distribution = 'series'
+  options.tooltips.axis = 'y'
   options.title = {
     display: true,
     text: 'Novas notificações diárias'
@@ -185,7 +200,7 @@ const byDayOptions = () => {
 }
 
 new Chart('by-day', {
-  type: 'bar',
+  type: 'horizontalBar',
   data: {
     datasets: [
       {
