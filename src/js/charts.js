@@ -120,10 +120,11 @@ const cumulativeChartOptions = () => {
   return options
 }
 
-const cumulativeChartDatasetOptions = {
-  borderWidth: 1,
+const datasetOptions = {
+  borderWidth: 2,
   cubicInterpolationMode: 'monotone',
-  pointRadius: 2
+  fill: false,
+  pointRadius: 0
 }
 
 new Chart('cumulative', {
@@ -131,44 +132,39 @@ new Chart('cumulative', {
   data: {
     datasets: [
       {
-        ...cumulativeChartDatasetOptions,
+        ...datasetOptions,
         data: cumulativeData.deaths,
         label: 'Mortes',
         backgroundColor: 'rgba(33, 33, 33, 0.7)',
-        borderColor: 'rgb(33, 33, 33)',
-        pointBackgroundColor: 'rgb(33, 33, 33)'
+        borderColor: 'rgb(33, 33, 33)'
       },
       {
-        ...cumulativeChartDatasetOptions,
+        ...datasetOptions,
         data: cumulativeData.recovered,
         label: 'Recuperados',
         backgroundColor: 'rgba(3, 169, 244, 0.5)',
-        borderColor: 'rgb(3, 169, 244)',
-        pointBackgroundColor: 'rgb(3, 169, 244)'
+        borderColor: 'rgb(3, 169, 244)'
       },
       {
-        ...cumulativeChartDatasetOptions,
+        ...datasetOptions,
         data: cumulativeData.confirmed,
         label: 'Confirmados',
         backgroundColor: 'rgba(239, 83, 80, 0.7)',
-        borderColor: 'rgb(211, 47, 47)',
-        pointBackgroundColor: 'rgb(211, 47, 47)'
+        borderColor: 'rgb(211, 47, 47)'
       },
       {
-        ...cumulativeChartDatasetOptions,
+        ...datasetOptions,
         data: cumulativeData.discarded,
         label: 'Descartados',
         backgroundColor: 'rgba(102, 187, 10, 0.3)',
-        borderColor: 'rgb(56, 142, 60)',
-        pointBackgroundColor: 'rgb(56, 142, 60)'
+        borderColor: 'rgb(56, 142, 60)'
       },
       {
-        ...cumulativeChartDatasetOptions,
+        ...datasetOptions,
         data: cumulativeData.suspects,
         label: 'Suspeitos',
         backgroundColor: 'rgba(255, 238, 88, 0.3)',
-        borderColor: 'rgb(251, 192, 45)',
-        pointBackgroundColor: 'rgb(251, 192, 45)'
+        borderColor: 'rgb(251, 192, 45)'
       }
     ]
   },
@@ -226,13 +222,10 @@ new Chart('active-cases', {
   data: {
     datasets: [
       {
+        ...datasetOptions,
         data: activeCases,
-        cubicInterpolationMode: 'monotone',
-        fill: false,
         label: 'Casos ativos',
-        borderColor: activeCasesColor,
-        pointBackgroundColor: activeCasesColor,
-        pointRadius: 4
+        borderColor: activeCasesColor
       }
     ]
   },
