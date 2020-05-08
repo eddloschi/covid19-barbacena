@@ -24,6 +24,7 @@ const prev = {
   suspects: 0,
   recovered: 0
 }
+const activeCases = []
 
 const mapData = ({ entryData, date }) => {
   if (!entryData) {
@@ -52,6 +53,14 @@ data.forEach((entry) => {
       byDayData[section].push(point)
     }
     prev[section] = entry[section]
+  }
+
+  const point = mapData({
+    entryData: entry.confirmed - entry.deaths - entry.recovered,
+    date: entry.date
+  })
+  if (point != null) {
+    activeCases.push(point)
   }
 })
 
@@ -207,4 +216,24 @@ new Chart('by-day', {
     ]
   },
   options: byDayOptions()
+})
+
+const activeCasesColor = '#ff5722'
+
+new Chart('active-cases', {
+  type: 'line',
+  data: {
+    datasets: [
+      {
+        data: activeCases,
+        cubicInterpolationMode: 'monotone',
+        fill: false,
+        label: 'Casos ativos',
+        borderColor: activeCasesColor,
+        pointBackgroundColor: activeCasesColor,
+        pointRadius: 4
+      }
+    ]
+  },
+  options: commonOptions()
 })
