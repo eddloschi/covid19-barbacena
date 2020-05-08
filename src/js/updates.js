@@ -3,7 +3,7 @@ import data from '../data.json'
 
 const updatesList = document.getElementById('updates-list')
 
-data.forEach((entry) => {
+data.reverse().forEach((entry) => {
   const listItem = document.createElement('li')
   const anchor = document.createElement('a')
   const date = document.createTextNode(
