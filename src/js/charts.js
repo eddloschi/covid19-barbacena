@@ -10,6 +10,7 @@ const cumulativeData = {
   discarded: [],
   recovered: []
 }
+const activeCases = []
 const byDayData = {
   confirmed: [],
   discarded: [],
@@ -24,7 +25,6 @@ const prev = {
   suspects: 0,
   recovered: 0
 }
-const activeCases = []
 
 const mapData = ({ entryData, date, axis }) => {
   if (!entryData) {
@@ -46,6 +46,15 @@ data.forEach((entry) => {
     }
   }
 
+  const point = mapData({
+    entryData: entry.confirmed - entry.deaths - entry.recovered,
+    date: entry.date,
+    axis: 'y'
+  })
+  if (point != null) {
+    activeCases.push(point)
+  }
+
   for (let section in byDayData) {
     const point = mapData({
       entryData: entry[section] - prev[section],
@@ -56,15 +65,6 @@ data.forEach((entry) => {
       byDayData[section].push(point)
     }
     prev[section] = entry[section]
-  }
-
-  const point = mapData({
-    entryData: entry.confirmed - entry.deaths - entry.recovered,
-    date: entry.date,
-    axis: 'y'
-  })
-  if (point != null) {
-    activeCases.push(point)
   }
 })
 
@@ -184,6 +184,23 @@ new Chart('cumulative', {
   options: cumulativeChartOptions()
 })
 
+const activeCasesColor = '#ff5722'
+
+new Chart('active-cases', {
+  type: 'line',
+  data: {
+    datasets: [
+      {
+        ...datasetOptions,
+        data: activeCases,
+        label: 'Casos ativos',
+        borderColor: activeCasesColor
+      }
+    ]
+  },
+  options: commonOptions()
+})
+
 const byDayOptions = () => {
   const options = commonOptions()
   const xAxes = options.scales.xAxes
@@ -231,21 +248,4 @@ new Chart('by-day', {
     ]
   },
   options: byDayOptions()
-})
-
-const activeCasesColor = '#ff5722'
-
-new Chart('active-cases', {
-  type: 'line',
-  data: {
-    datasets: [
-      {
-        ...datasetOptions,
-        data: activeCases,
-        label: 'Casos ativos',
-        borderColor: activeCasesColor
-      }
-    ]
-  },
-  options: commonOptions()
 })
