@@ -3,7 +3,6 @@ import { DateTime } from 'luxon'
 import 'chartjs-adapter-luxon'
 import data from '../data.json'
 
-const labels = []
 const cumulativeData = {
   deaths: [],
   confirmed: [],
@@ -25,32 +24,36 @@ const prev = {
   suspects: 0,
   recovered: 0
 }
-// const suspectsByDayData = []
 
-const mapData = (entryData) => {
-  if (entryData == undefined || entryData > 0) {
-    return entryData
+const mapData = ({ entryData, date }) => {
+  if (!entryData) {
+    return null
   }
-  return null
+  return {
+    x: date,
+    y: entryData
+  }
 }
 
 data.forEach((entry) => {
-  labels.push(entry.date)
-
   for (let section in cumulativeData) {
-    cumulativeData[section].push(mapData(entry[section]))
+    const point = mapData({ entryData: entry[section], date: entry.date })
+    if (point != null) {
+      cumulativeData[section].push(point)
+    }
   }
 
   for (let section in byDayData) {
-    byDayData[section].push(entry[section] - prev[section])
+    const point = mapData({
+      entryData: entry[section] - prev[section],
+      date: entry.date
+    })
+    if (point != null) {
+      byDayData[section].push(point)
+    }
     prev[section] = entry[section]
   }
-
-  // suspectsByDayData.push(entry.suspects + entry.discarded - prev.suspects)
-  // prev.suspects = entry.suspects + entry.discarded
 })
-
-// byDayData.suspects = suspectsByDayData
 
 const commonOptions = () => {
   return {
@@ -116,7 +119,6 @@ const cumulativeChartDatasetOptions = {
 new Chart('cumulative', {
   type: 'line',
   data: {
-    labels,
     datasets: [
       {
         ...cumulativeChartDatasetOptions,
@@ -176,7 +178,6 @@ const byDayOptions = () => {
 new Chart('by-day', {
   type: 'bar',
   data: {
-    labels: labels,
     datasets: [
       {
         label: 'Novas mortes',
