@@ -122,6 +122,7 @@ const cumulativeChartOptions = () => {
 
 const cumulativeChartDatasetOptions = {
   borderWidth: 1,
+  cubicInterpolationMode: 'monotone',
   pointRadius: 2
 }
 
