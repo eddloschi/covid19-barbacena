@@ -206,8 +206,11 @@ const byDayOptions = () => {
   const xAxes = options.scales.xAxes
   options.scales.xAxes = options.scales.yAxes
   options.scales.yAxes = xAxes
-  options.scales.yAxes[0].offset = true
   options.scales.yAxes[0].distribution = 'series'
+  options.scales.yAxes[0].gridLines.display = true
+  options.scales.yAxes[0].gridLines.offsetGridLines = true
+  options.scales.yAxes[0].offset = true
+  options.scales.xAxes[0].position = 'top'
   options.tooltips.axis = 'y'
   options.title = {
     display: true,
