@@ -15,7 +15,6 @@ const byDayData = {
   confirmed: [],
   discarded: [],
   deaths: [],
-  suspects: [],
   recovered: []
 }
 const prev = {
@@ -25,6 +24,7 @@ const prev = {
   suspects: 0,
   recovered: 0
 }
+const suspectsByDayData = []
 
 const mapData = ({ entryData, date, axis }) => {
   if (!entryData) {
@@ -46,7 +46,7 @@ data.forEach((entry) => {
     }
   }
 
-  const point = mapData({
+  let point = mapData({
     entryData: entry.confirmed - entry.deaths - entry.recovered,
     date: entry.date,
     axis: 'y'
@@ -66,6 +66,16 @@ data.forEach((entry) => {
     }
     prev[section] = entry[section]
   }
+
+  point = mapData({
+    entryData: entry.suspects + entry.discarded + entry.confirmed - prev.suspects,
+    date: entry.date,
+    axis: 'x'
+  })
+  if (point != null) {
+    suspectsByDayData.push(point)
+  }
+  prev.suspects = entry.suspects + entry.discarded + entry.confirmed
 })
 
 const BY_DAY_ENTRY_HEIGHT = 50
@@ -73,6 +83,8 @@ const byDayChartHeight = data.length * BY_DAY_ENTRY_HEIGHT
 document.querySelectorAll('.vertical-chart').forEach((node) => {
   node.style.height = `${byDayChartHeight}px`
 })
+
+byDayData.suspects = suspectsByDayData
 
 const commonOptions = () => {
   return {
