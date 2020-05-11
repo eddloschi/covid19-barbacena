@@ -27,7 +27,7 @@ const prev = {
 const suspectsByDayData = []
 
 const mapData = ({ entryData, date, axis }) => {
-  if (!entryData) {
+  if (!entryData || entryData < 0) {
     return null
   }
 
