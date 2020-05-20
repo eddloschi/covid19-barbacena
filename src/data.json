@@ -511,5 +511,14 @@
     "deaths": 3,
     "recovered": 21,
     "link": "https://www.instagram.com/p/CAYrqY3nF9o/"
+  },
+  {
+    "date": "2020-05-20",
+    "suspects": 603,
+    "confirmed": 42,
+    "discarded": 239,
+    "deaths": 3,
+    "recovered": 22,
+    "link": "https://www.instagram.com/p/CAbY5wlH4hm/"
   }
 ]
